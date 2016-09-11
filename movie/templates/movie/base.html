@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'movie/style.css' %}">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+
+
+    </style>
+    <title>Trailz</title>
+     <link rel="stylesheet" type="text/css" href="#"/>
+</head>
+<body>
+    <nav class="navbar navbar-inverse"style="font-family: 'Anton'">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'home:home' %}">Trailz</a>
+            </div>
+            <div class="collapse navbar-collapse" id="topnavbar">
+                <ul class="nav navbar-nav">
+                    {% block active %}
+                    <li class="active"><a href="{% url 'movie:home' %}">Movies</a></li>
+
+                    <li><a href="{% url 'game:home' %}">Games</a></li>
+                    {% endblock %}
+                </ul>
+                <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="q" value="" />
+                        <button type="submit" class="btn btn-default">Search</button>
+
+                    </div>
+
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    {% block aboutcontact %}
+                    <li><a href="{% url 'aboutus:home' %}">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    {% endblock %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% block body %}
+
+{% endblock %}
+
+
+</body>
+<footer class="footer">Watch Trailers of Movies and Games</footer>
+</html>

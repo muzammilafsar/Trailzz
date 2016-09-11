@@ -1,0 +1,12 @@
+{% extends 'movie/base.html' %}
+{% block active %}
+<li ><a href="{% url 'movie:home' %}">Movies</a></li>
+<li ><a href="{% url 'game:home' %}">Games</a></li>
+{% endblock %} }}
+{% block body %}
+<h1 >About us</h1>
+{% endblock %}
+{% block aboutcontact %}
+<li class="active"><a href="{% url 'aboutus:home' %}">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+{% endblock %}

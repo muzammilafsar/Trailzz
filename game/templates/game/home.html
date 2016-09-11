@@ -1,0 +1,24 @@
+{% extends 'movie/base.html' %}
+{% block active %}
+<li ><a href="{% url 'movie:home' %}">Movies</a></li>
+<li class="active"><a href="{% url 'game:home' %}">Games</a></li>
+{% endblock %}
+{% block body %}
+
+
+    <ul>
+
+
+        {% for movie in object_list %}
+
+        <div class="col-lg-2" >
+        <div class="panel panel-default">
+                     <a href={% url 'game:detail' movie.id %}>
+            <div class="panel-body"><img style="height:300px;" src="{{ movie.banner }}" class="img-responsive img-rounded" /></div>
+            <div class="panel-footer">{{ movie.title }}</div>
+            <div class="panel-footer">{{ movie.release_date }}</div></a>
+        </div>
+         </div>
+        {% endfor %}
+    </ul>
+{% endblock %}

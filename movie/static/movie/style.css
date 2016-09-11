@@ -1,0 +1,36 @@
+body {
+}
+
+.navbar{
+    border-radius: 0;
+}
+.navbar-brand{
+    font-family: 'Lobster';
+}
+.panel{
+    font-family: 'Anton';
+
+
+    color: brown;
+    background-color: black;
+
+}
+.panel-footer{vertical-align: bottom;
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  font-size: large;
+  padding-top: 12pt;
+  font-family:'Orbitron' ;
+    color: white;
+  background-color: darkgrey;  text-align: center;
+}

@@ -1,0 +1,36 @@
+{% extends 'movie/base.html' %}
+{% block active %}
+<li ><a href="{% url 'movie:home' %}">Movies</a></li>
+<li ><a href="{% url 'game:home' %}">Games</a></li>
+{% endblock %} }}
+{% block aboutcontact %}
+<li ><a href="{% url 'aboutus:home' %}">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+{% endblock %}
+
+{% block body %}
+<div class="container" >
+  <h1 style="font-family: 'Orbitron" >Watch Trailers of Latest Movies and Games </h1>
+  <div class="row">
+    <div class="col-sm-6" style="">
+     <a href='{% url 'movie:home' %}' > <p style="font-family: 'Bangers';font-size: 30pt" >Movies</p></a>
+    </div>
+    <div class="col-sm-6" style="">
+      <a href='{% url 'game:home' %}' ><p style="font-family: 'Bangers';font-size: 30pt" >Games</p></a>
+    </div>
+  </div>
+ <div class="row"  >
+    <div class="col-sm-6" style="">
+        <a href='{% url 'movie:home' %}' >
+      <img class="img-rounded" style="width: 400pt" src="https://cdn3.iconfinder.com/data/icons/multimedia/100/play_movie_3-512.png"></a>
+    </div>
+    <div class="col-sm-6" style="">
+        <a href='{% url 'game:home' %}' >
+      <img class="img-rounded" style="width: 400pt" src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Play-Games-icon.png"></a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+
